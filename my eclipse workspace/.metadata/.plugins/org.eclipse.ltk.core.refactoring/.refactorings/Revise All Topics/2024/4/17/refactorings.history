@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.revise.collections&apos; to &apos;com.revise.library&apos;&#x0D;&#x0A;- Original project: &apos;Revise All Topics&apos;&#x0D;&#x0A;- Original element: &apos;Revise All Topics/src/com.revise.collections&apos;&#x0D;&#x0A;- Renamed element: &apos;Revise All Topics/src/com.revise.library&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.revise.collections&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.revise.collections" name="com.revise.library" qualified="false" references="true" stamp="1714054162349" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,11 @@
+package com.oops.gettersetter;
+
+public class Main {
+public static void main(String[] args) 
+{
+ Service s1=new Service();
+ User ramesh=new User();
+ s1.signUp("sumit123@gmail.com","12304hi", ramesh);
+ s1.logIn("sumit123@gmail.com","12304hi", ramesh);
+}
+}

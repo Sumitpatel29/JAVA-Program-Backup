@@ -1,0 +1,137 @@
+package com.dsa.programs;
+
+public class MyLinkedList 
+{
+	Node head; 	//it will point to 1st node only
+
+	public Node add(int index,int data)
+	{
+		if(head==null && index!=0)
+		{
+			System.out.println("empty");
+			return head;
+		}
+		if(index==0)
+		{
+			return addFront(data);
+		}
+
+		Node n1=new Node(data);
+		int c=0;
+		Node temp=head;
+		//	        while(c<index-1)
+		//	        {
+		//	            temp=temp.next;
+		//	            c++;
+		//	        }
+		while(temp.next!=null)
+		{
+			if(c>=index-1)
+			{
+				break;
+			}
+			c++;
+			temp=temp.next;
+		}
+		n1.next=temp.next;
+		temp.next=n1;
+		return head;
+
+	}
+	public Node addFront(int data)	//it will add element in first head node only
+	{
+		Node newNode=new Node(data);
+		if(head==null)
+		{
+			head=newNode;
+			return head;
+		}
+		newNode.next=head;
+		head=newNode;
+		return head;
+	}
+	public Node add(int data)	//it will add element in the last bucket
+	{
+		Node newNode=new Node(data);
+		if(head==null)
+		{
+			head=newNode;
+			return head;
+		}
+		Node temp=head;
+		while(temp.next!=null)
+		{
+			temp=temp.next;
+		}
+		temp.next=newNode;
+		return head;
+	}
+	public int size()
+	{
+		Node temp=head;
+		int c=0;
+		while(temp!=null)
+		{
+			c++;
+			temp=temp.next;
+		}
+		return c;
+	}
+	public void display()
+	{
+		Node temp=head;
+		while(temp!=null)
+		{
+			System.out.print(temp.data+" ");
+			temp=temp.next;
+		}
+		System.out.println();
+		// System.out.println("end of display()");
+	}
+	public int linearSearch(int key)	//linear search in linkedList(it will return value)
+	   {
+	       Node temp=head;
+	       int c=0;
+	       while(temp!=null)
+	       {        
+	           if(temp.data==key)
+	           {
+	               return c;
+	           }
+	           c++;
+	           temp=temp.next;
+	       }
+	       return -1;
+	   }
+	
+	 public boolean isIdentical (Node head1, Node head2)	//to check if the method is identical or not
+	 {
+	       if(size(head1)!=size(head2))
+	       {
+	           return false;
+	       }
+	       Node temp1=head1;
+	       Node temp2=head2;
+	       while(temp1!=null)
+	       {
+	           if(temp1.data!=temp2.data)
+	           {
+	               return false;
+	           }
+	           temp1=temp1.next;
+	           temp2=temp2.next;
+	       }
+	       return true;
+	    }
+	    public int size(Node head)
+	    {
+	        int c=0;
+	        Node temp=head;
+	        while(temp!=null)
+	        {
+	            c++;
+	            temp=temp.next;
+	        }
+	        return c;
+	    }
+}

@@ -1,0 +1,10 @@
+package com.assignments.loops;
+
+public class Printprimetest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

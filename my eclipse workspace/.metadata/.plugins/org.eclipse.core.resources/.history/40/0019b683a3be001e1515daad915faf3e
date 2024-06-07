@@ -1,0 +1,28 @@
+package com.assignments.ifelse;
+public class CheckChar 
+{
+ public static String checkChar(char x)
+ {
+	if(x>=65 && x<=90)
+	{
+		return "It is upper case alphabet";
+	}
+	else if(x>=97 && x<=122)
+	{
+		return "It is lower case alphabet";
+	}
+	else if(x>=37 && x<=48)
+	{
+		return "It is a number";
+	}
+	else
+	{
+		return "It is a special character";
+	}
+ }
+ public static void main(String[] args) 
+ {
+  System.out.println(checkChar('r'));	
+  System.out.println(checkChar('E'));
+}
+}
